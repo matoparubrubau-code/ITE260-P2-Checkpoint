@@ -1,0 +1,49 @@
+def calculate_average(score1, score2, score3):
+    return (score1 + score2 + score3) / 3
+
+
+
+students = int(input("How many students? "))
+
+
+while students < 3:
+    print("Please enter at least 3 students.")
+    students = int(input("How many students? "))
+
+
+
+for i in range(students):
+
+    print("\nStudent", i + 1)
+
+    
+    name = input("Enter student name: ")
+
+    
+    score1 = float(input("Enter Activity 1 score: "))
+    score2 = float(input("Enter Activity 2 score: "))
+    score3 = float(input("Enter Activity 3 score: "))
+
+    
+    average = calculate_average(score1, score2, score3)
+
+    
+    if average >= 90:
+        status = "Excellent"
+    elif average >= 80:
+        status = "Very Good"
+    elif average >= 75:
+        status = "Good"
+    else:
+        status = "Needs Improvement"
+
+   
+    print(" Student Result ")
+    print("Name:", name)
+    print("Activity 1:", score1)
+    print("Activity 2:", score2)
+    print("Activity 3:", score3)
+    print("Average:", round(average, 2))
+    print("Status:", status)
+
+print("All students have been processed.")
